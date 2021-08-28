@@ -1,0 +1,35 @@
+<app-header></app-header>
+<ng-template #PleaseLogin class="non-login-section"> 
+  <h1>
+    Please LogIn
+  </h1>
+  <button  routerLink='/login' mat-stroked-button class="login-button" type="submit"> Log In </button>
+</ng-template>
+
+<mat-card *ngIf='authenticationService.loggedIn; else PleaseLogin'  class="auction-section">
+  <h2 class="title">Preview of recommended auctions</h2>
+  <div class="auction-container">
+    <div class="auction-card" *ngFor='let car of recommendedCars'>
+      <img mat-card-image src={{car.associatedVehicle.vehicleImages[0].url}} alt=''>
+      <mat-card-content class="auction-card-desctiption">
+        <h3 class="card-title">
+          {{car.associatedVehicle.make}}
+          {{car.associatedVehicle.model}}
+        </h3>
+        <div class="car-descrition">
+          <p>
+            {{car.associatedVehicle.ez}} | {{car.associatedVehicle.mileageInKm}} km | {{car.associatedVehicle.fuelType}} | {{car.associatedVehicle.transmission}}
+          </p>
+          <p>Highest bid:</p>
+          <p> {{car.currentHighestBidValue}} &euro; </p>
+          <p>Am I the heighest bidder? - <span *ngIf='car.amIHighestBidder; else NoBlock'>Yes</span>
+          <ng-template #NoBlock> No </ng-template>
+          </p>
+          <p>time left :</p> 
+          <app-remaining-time [secondsLeft]='car.remainingTimeInSeconds'></app-remaining-time>
+        </div>
+      </mat-card-content>
+    </div>
+  </div>
+</mat-card> 
+

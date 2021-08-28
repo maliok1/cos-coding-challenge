@@ -1,0 +1,13 @@
+mat-toolbar{
+  background: #ffd452;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-white{
+  color: white;
+}
+a{
+  text-decoration: none;
+  color: black;
+}

@@ -1,0 +1,55 @@
+$yellowColor: rgb(255 212 82);;
+
+
+mat-card{
+  padding: 16px;
+  border-radius: 4px;
+  justify-self: center;
+  width: 30%;
+  margin: 3% auto 0;
+  overflow: hidden;
+
+  .login-logo{
+    display: block;
+    padding: 6%;
+    text-align: center;
+    font-size: 32px;
+    width: 5  0%;
+    margin: 0 auto;
+  }
+}
+
+.form-group{
+  width: 100%;
+}
+
+.login-button{
+  width: 100%;
+  margin: 10px 0;
+  border-color: rgba(0,0,0,.12);
+}
+
+.snackBar{
+  visibility: hidden;
+    margin-right: 8px;
+  }
+// mat-input error outline color
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick{
+  color: #f3f4f6!important;
+  // opacity: 0.8!important;
+}
+
+//mat-input focused color
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick  {
+  color: $yellowColor;
+}
+
+// mat-label focused style
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: $yellowColor;
+}
+
+// mat-label error style
+::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+  color: #4e4e4e;
+}

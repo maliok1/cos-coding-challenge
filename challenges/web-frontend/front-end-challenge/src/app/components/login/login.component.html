@@ -1,0 +1,23 @@
+<mat-card>
+  <img alt='login logo' src="../assets/logo-dark.svg" class="login-logo">
+  <mat-card-content class="mat-card-content">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <p>
+        <mat-form-field appearance="outline" class="form-group">
+          <mat-label> Email</mat-label>
+          <input matInput formControlName="email" autocomplete="on" />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" class="form-group">
+          <mat-label> Password </mat-label>
+          <input matInput formControlName="password" type="password" />
+        </mat-form-field>
+      </p>
+      <button mat-stroked-button class="login-button" type="submit"> Log In </button>
+    </form>
+  </mat-card-content>
+</mat-card>
+<mat-form-field class="snackBar" appearance="fill">
+  <input matInput value={{errorMessage}} #message>
+</mat-form-field>

@@ -1,0 +1,85 @@
+.non-login-section {
+  display: flex;
+  flex-direction: column;
+
+  button {
+    
+  }
+}
+main{
+  height: 100%;
+}
+.auction-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial,sans-serif;
+  color: #474b57;
+  background-color: #f3f4f6;
+  height: 100%;
+
+  .title {
+    font-size: 24px;
+    color: #2f343e;
+    margin: 32px 0 48px 0;
+    font-family: 'DIN Alternate', sans-serif;                                            
+  }
+  
+  .auction-container{
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    background-color: #f3f4f6;
+    align-items: center;
+    justify-content: center;
+
+    .auction-card-desctiption{
+      padding-left: 10px;
+      padding-bottom: 10px;
+    }
+    .auction-card{
+
+      .card-title{
+        font-size: 18px;
+        font-weight: 500;
+        word-wrap: break-word;
+        overflow: hidden;
+      }
+      .car-descrition{
+        p{
+          color: rgba(0,0,0,.54);
+        }
+      } 
+
+      background-color: white;
+      margin: 20px 10px;
+      width: 360px;
+      
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+
+      display: flex;
+      flex-direction: column;
+      
+      img {
+        height: 200px;
+        width: 100%;
+        max-height: 220px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-bottom: 16px;
+        align-self: center;
+        object-fit: cover;
+      }
+    }
+  } ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
