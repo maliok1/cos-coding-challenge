@@ -45,18 +45,19 @@ constructor(private http: HttpClient) {}
   }
   
   public getAuction(email){    
-    return this.http.get<any>(`https://api-core-dev.caronsale.de/api/v2/auction/buyer/recommended/score?count=false
-    `,
-    {headers:
-      {
-      'userId': email, 
-      'authtoken': JSON.parse(this.getToken())
-    }
-    })  
+    return this.http.get<any>(`https://api-core-dev.caronsale.de/api/v2/auction/buyer/?filter=IAuctionFilter&count=false
+    `, {headers:
+          {
+            'Content-Type': 'application/json',
+            'userId': email, 
+            'authtoken': JSON.parse(this.getToken())
+        }})  
   }
 
   public getAuctionsConfig(){
     return this.http.get(`https://api-core-dev.caronsale.de/api/v1/public/config/auctions`).subscribe(res=>console.log(res, 'Auctions')
     )
   }
+
 }
+

@@ -1,10 +1,6 @@
 .non-login-section {
   display: flex;
   flex-direction: column;
-
-  button {
-    
-  }
 }
 main{
   height: 100%;
@@ -36,12 +32,12 @@ main{
     align-items: center;
     justify-content: center;
 
-    .auction-card-desctiption{
-      padding-left: 10px;
-      padding-bottom: 10px;
-    }
+    
     .auction-card{
-
+      .auction-card-desctiption{
+        padding-left: 10px;
+        padding-bottom: 10px;
+      }
       .card-title{
         font-size: 18px;
         font-weight: 500;
@@ -57,6 +53,7 @@ main{
       background-color: white;
       margin: 20px 10px;
       width: 360px;
+      height: 500px;
       
       border-radius: 10px;
       -webkit-border-radius: 10px;
@@ -69,6 +66,7 @@ main{
       
       img {
         height: 200px;
+        max-height: 200px;
         width: 100%;
         max-height: 220px;
         border-top-left-radius: 10px;
